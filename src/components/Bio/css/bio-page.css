@@ -1,0 +1,66 @@
+@@font-face {
+  src: url(../../SideNav-Toolbar/fonts/Zefani.otf);
+  font-family: Zefani;
+}
+
+.bio-card{
+  height:90%;
+  width: 85%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-card h1{
+    color: white;
+    font-family: Zefani;
+    font-size: 3vw;
+    margin-bottom: 0;
+}
+
+.bio-card p{
+  color: white;
+  font-family: Zefani;
+  font-size: 2vw;
+  margin-top: 3vh;
+}
+
+.bio-pic{
+  width:50%;
+}
+.bio-header{
+  height: 100vh;
+  min-height: 650px;
+  background-image: url("../images/grey-background.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+. h3{
+  color: white;
+}
+.profile{
+  width:100%;
+  border-radius: 4px;
+  box-shadow: 25px 25px 50px;
+}
+
+.profile-bio {
+  width:50%;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+}
+
+.profile-container{
+  display: flex;
+  width:92%;
+  flex-direction: row;
+}
+
+.text{
+  color: white;
+  font-family: Zefani;
+}

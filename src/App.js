@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import mainLogo from "./images/djAumir_logo.png"
+
+import Toolbar from "./components/SideNav-Toolbar/js/toolbar";
+import ContactForm from "./components/Contact-Us/js/Contact-Page";
+import BioForm from"./components/Bio/js/bio-page";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = props =>(
+      <div className="App">
+        <Toolbar/>
+        <header className="App-header" id="home-header" style={{background:"white"}}>
+          <img src={mainLogo} style={{width:"50%"}}/>
+        </header>
+        <BioForm id="bio-header"/>
+        <ContactForm/>
+      </div>
+    );
 
 export default App;

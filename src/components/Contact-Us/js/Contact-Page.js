@@ -60,7 +60,7 @@ class ContactForm extends Component {
 
                 <div className="email-container">
                 Email <span style={{color: "red"}}>*</span>
-                  <input className="email-entry" placeholder="Email@Host.com"
+                  <input className="email-entry" placeholder="Your Email"
                     value={this.state.contactEmail}
                     onChange = {e => this.setState({contactEmail: e.target.value})}>
                   </input>

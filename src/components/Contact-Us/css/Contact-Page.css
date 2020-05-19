@@ -4,22 +4,21 @@
 }
 
 .align-content{
-  height:100%;
-  width: 90%;
+  height: 90%;
+  width: 100%;
   max-width: 600px;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content:space-around;
   align-items: center;
-  z-index: 30;
 }
 
 .contact-content{
   width: 40vw;
-  min-width:500px;
+  min-width:300px;
   max-width: 700px;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,15 +68,14 @@
 }
 
 .email-container{
-  height:10%;
   min-height: 70px;
   width: 48%;
-  min-width: 200px;
-  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 25px;
 }
 .email-entry{
-  width:90%;
+  width:94%;
   height: 40px;
   margin-top: 5px;
   border-radius: 5px;
@@ -90,6 +88,7 @@
   width:90%;
   margin-top: 10px;
   font-size: 25px;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 .message-entry{
@@ -97,19 +96,18 @@
   height: 75%;
   margin-top: 5px;
   border-radius: 5px;
-  overflow-y: auto;
 }
 
 .name-container{
-  height: 10%;
   min-height: 70px;
   width:48%;
-  min-width: 200px;
   font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .name-entry{
-  width:90%;
+  width:94%;
   height:40px;
   margin-top: 5px;
   border-radius: 5px;
@@ -121,7 +119,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 10px;
 }
 
 .send-message{

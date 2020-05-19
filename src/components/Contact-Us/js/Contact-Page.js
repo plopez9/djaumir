@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import axios from "axios";
 
 import "../css/Contact-Page.css"
 
-const API_PATH='http://localhost:1992/react-contact-form/api/contact/index.php';
 
 class ContactForm extends Component {
 

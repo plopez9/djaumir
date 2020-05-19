@@ -19,22 +19,6 @@ class ContactForm extends Component {
     }
   }
 
-  submitMessage(event) {
-    event.preventDefault();
-    axios({
-      method:"post",
-      url: `${API_PATH}`,
-      headers: {"content-type": "application/json"},
-      data: this.state,
-    }).then(result => {
-      this.setState({mailSent:result.data.sent})
-    }).catch(
-      error=>this.setState({error:error.message})
-    );
-
-    console.log(this.state);
-  }
-
   render(){
 
     return (
@@ -43,7 +27,7 @@ class ContactForm extends Component {
         </div>
 
         <div className="contact-content">
-            <form className="align-content" action="../PHP/contactform.php" method="post">
+            <form className="align-content">
 
               <div className="contact-title">
                 <h2> Contact Us </h2>

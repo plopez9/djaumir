@@ -25,7 +25,7 @@ class ContactForm extends Component {
         </div>
 
         <div className="contact-content">
-            <form className="align-content" action="../PHP/contactform.php" method="post">
+            <div className="align-content" action="../PHP/contactform.php" method="post">
 
               <div className="contact-title">
                 <h2> Contact Us </h2>
@@ -64,7 +64,7 @@ class ContactForm extends Component {
                 Send Message
               </button>
 
-            </form>
+            </div>
 
         </div>
       </div>

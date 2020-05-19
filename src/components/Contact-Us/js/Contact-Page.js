@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import axios from "axios";
 
 import "../css/Contact-Page.css"
 
+const API_PATH='http://localhost:1992/react-contact-form/api/contact/index.php';
 
 class ContactForm extends Component {
 
@@ -17,6 +19,22 @@ class ContactForm extends Component {
     }
   }
 
+  submitMessage(event) {
+    event.preventDefault();
+    axios({
+      method:"post",
+      url: `${API_PATH}`,
+      headers: {"content-type": "application/json"},
+      data: this.state,
+    }).then(result => {
+      this.setState({mailSent:result.data.sent})
+    }).catch(
+      error=>this.setState({error:error.message})
+    );
+
+    console.log(this.state);
+  }
+
   render(){
 
     return (
@@ -25,7 +43,7 @@ class ContactForm extends Component {
         </div>
 
         <div className="contact-content">
-            <form className="align-content">
+            <form className="align-content" action="../PHP/contactform.php" method="post">
 
               <div className="contact-title">
                 <h2> Contact Us </h2>
@@ -60,10 +78,15 @@ class ContactForm extends Component {
               </div>
 
               <button className="send-message"
+              onClick = {e => this.submitMessage(e)}
               disabled ={!this.state.contactName||!this.state.contactEmail||!this.state.emailMessage}>
                 Send Message
               </button>
 
+              <div className="thanks">
+                {this.state.mailSent &&
+                <div> Thank you for contacting us! </div>}
+              </div>
             </form>
 
         </div>
